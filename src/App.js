@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const Challenge1 = React.lazy(() =>
-	import('./starter/challenge1/Challenge1')
+	import('./newbie/challenge1/Challenge1')
 )
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 		<React.Suspense fallback='Loading...'>
 			<Router>
 				<Routes>
-					<Route path='/starter/challenge-1' element={<Challenge1 />} />
+					<Route path='/newbie/challenge-1' element={<Challenge1 />} />
 				</Routes>
 			</Router>
 		</React.Suspense>
