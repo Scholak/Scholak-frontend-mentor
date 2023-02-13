@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(216, 12%, 8%);
+}
+
+.box {
+  width: 90vw;
+  background: hsl(213, 29%, 15%);
+  border-radius: 2rem;
+  padding: 4rem;
+}
+
+.icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(213, 19%, 18%);
+  border-radius: 50%;
+  margin-bottom: 3rem;
+}
+
+.heading {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+
+.text {
+  margin-bottom: 2.5rem;
+  font-size: 1.5rem;
+  color: hsl(215, 11%, 70%);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.rating {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating span {
+  width: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 50%;
+  color: hsl(216, 12%, 54%);
+  background: hsl(213, 19%, 18%);
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.rating span:hover {
+  background: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+
+.rating span.active {
+  background: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+
+.btn {
+  all: unset;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 3rem;
+  background: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.btn:hover {
+  background: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+.center {
+  text-align: center;
+}
+
+.thankYouSVG {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.ratingResult {
+  display: inline-block;
+  padding: .5rem 2rem;
+  background: hsl(213, 19%, 18%);
+  color: hsl(25, 97%, 53%);
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .box {
+    width: 40rem;
+  }
+
+  .rating span {
+  width: 5rem;
+  line-height: 5rem;
+}
+}
