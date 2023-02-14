@@ -12,6 +12,10 @@ const PricingComponent = React.lazy(() =>
 	import('./junior/pricing-component/PricingComponent')
 )
 
+const AdviceGeneratorApp = React.lazy(() =>
+	import('./junior/advice-generator-app/AdviceGeneratorApp')
+)
+
 function App() {
   return (
 		<React.Suspense fallback='Loading...'>
@@ -29,6 +33,10 @@ function App() {
 					<Route
 						path='/pricing-component-with-toggle'
 						element={<PricingComponent />}
+					/>
+					<Route
+						path='/advice-generator-app'
+						element={<AdviceGeneratorApp />}
 					/>
 				</Routes>
 			</Router>
