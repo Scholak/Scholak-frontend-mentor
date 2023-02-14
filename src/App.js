@@ -27,7 +27,7 @@ function App() {
 					/>
 
 					<Route
-						path='pricing-component-with-toggle'
+						path='/pricing-component-with-toggle'
 						element={<PricingComponent />}
 					/>
 				</Routes>
