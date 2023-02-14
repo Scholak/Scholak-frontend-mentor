@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import styles from './Challenge2.module.css'
+import React from 'react'
+import styles from './InteractiveRatingComponent.module.css'
 import star from './images/icon-star.svg'
 
 const Rating = ({ rating, handleRating, handleSubmit }) => {
@@ -15,7 +15,7 @@ const Rating = ({ rating, handleRating, handleSubmit }) => {
 			</p>
 			<div className={styles.rating}>
         {[1, 2, 3, 4, 5].map(number => (
-          <span key={number} onClick={() => handleRating(number)} className={rating == number ? styles.active : '' }>{number}</span>
+          <span key={number} onClick={() => handleRating(number)} className={rating === number ? styles.active : '' }>{number}</span>
         ))}
 			</div>
 			<button className={styles.btn} onClick={handleSubmit}>

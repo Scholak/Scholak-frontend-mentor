@@ -1,10 +1,10 @@
 import React from 'react'
-import styles from './Challenge1.module.css'
+import styles from './ProductPreviewCardComponent.module.css'
 import desktopImg from './images/image-product-desktop.jpg'
 import mobileImg from './images/image-product-mobile.jpg'
 import CartSvg from './images/icon-cart.svg'
 
-const Challenge1 = () => {
+const ProductPreviewCardComponent = () => {
 	return (
 		<div className={styles.card}>
 			<div className={styles.image}>
@@ -33,4 +33,4 @@ const Challenge1 = () => {
 	)
 }
 
-export default Challenge1
+export default ProductPreviewCardComponent

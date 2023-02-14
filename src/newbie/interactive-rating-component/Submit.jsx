@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Challenge2.module.css'
+import styles from './InteractiveRatingComponent.module.css'
 import thankYouSVG from './images/illustration-thank-you.svg'
 
 const Submit = ({rating}) => {

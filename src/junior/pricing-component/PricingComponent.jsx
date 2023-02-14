@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import styles from './Challenge1.module.css'
+import styles from './PricingComponent.module.css'
 import bgTop from './images/bg-top.svg'
 import bgBottom from './images/bg-bottom.svg'
 
 
 
-const Challenge1 = () => {
-  const plans = {
+const PricingComponent = () => {
+	const plans = {
 		monthly: [
 			{
 				type: 'Basic',
@@ -40,10 +40,10 @@ const Challenge1 = () => {
 				price: '399.99',
 				features: ['2 TB Storage', '10 Users Allowed', 'Send up to 20 GB'],
 			},
-		]
+		],
 	}
 
-  const [plan, setPlan] = useState('annually')
+	const [plan, setPlan] = useState('monthly')
 
 	const [active, setActive] = useState(false)
 
@@ -51,15 +51,18 @@ const Challenge1 = () => {
 		setActive(!active)
 		plan === 'annually' ? setPlan('monthly') : setPlan('annually')
 	}
-  
-  return (
+
+	return (
 		<section className={styles.pricingSection}>
 			<img src={bgTop} alt='top right background image' />
 			<img src={bgBottom} alt='bottom left background image' />
 			<h3 className={styles.title}>Our Pricing</h3>
 			<div className={styles.toggle}>
 				<span>Annually</span>
-				<span className={`${styles.toggleBtn} ${active ? styles.active : ''}`} onClick={handleChangePlan}></span>
+				<span
+					className={`${styles.toggleBtn} ${!active ? styles.active : ''}`}
+					onClick={handleChangePlan}
+				></span>
 				<span>Monthly</span>
 			</div>
 			<div className={styles.cards}>
@@ -82,4 +85,4 @@ const Challenge1 = () => {
 	)
 }
 
-export default Challenge1
+export default PricingComponent

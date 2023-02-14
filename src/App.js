@@ -1,22 +1,35 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-const NChallenge1 = React.lazy(() =>
-	import('./newbie/challenge1/Challenge1')
+const ProductPreviewCardComponent = React.lazy(() =>
+	import('./newbie/product-preview-component/ProductPreviewCardComponent')
 )
-const NChallenge2 = React.lazy(() => import('./newbie/challenge2/Challenge2'))
+const InteractiveRatingComponent = React.lazy(() =>
+	import('./newbie/interactive-rating-component/InteractiveRatingComponent')
+)
 
-const JChallenge1 = React.lazy(() => import('./junior/challenge1/Challenge1'))
+const PricingComponent = React.lazy(() =>
+	import('./junior/pricing-component/PricingComponent')
+)
 
 function App() {
   return (
 		<React.Suspense fallback='Loading...'>
 			<Router>
 				<Routes>
-					<Route path='/newbie/challenge-1' element={<NChallenge1 />} />
-					<Route path='/newbie/challenge-2' element={<NChallenge2 />} />
+					<Route
+						path='/product-preview-card-component'
+						element={<ProductPreviewCardComponent />}
+					/>
+					<Route
+						path='/interactive-rating-component'
+						element={<InteractiveRatingComponent />}
+					/>
 
-					<Route path='/junior/challenge-1' element={<JChallenge1 />} />
+					<Route
+						path='pricing-component-with-toggle'
+						element={<PricingComponent />}
+					/>
 				</Routes>
 			</Router>
 		</React.Suspense>
