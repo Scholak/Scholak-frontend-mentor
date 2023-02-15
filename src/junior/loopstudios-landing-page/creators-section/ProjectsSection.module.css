@@ -1,0 +1,83 @@
+.projectArea {
+  display: grid;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.project {
+  position: relative;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.projectImg {
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: hsla(0, 0%, 0%, .15);
+  transition: all .3s;
+}
+
+.projectTitle {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  padding: 2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.project:hover .overlay {
+  background: hsla(0, 0%, 100%, .75);
+}
+
+.project:hover {
+  color: hsl(0, 0%, 0%);
+}
+
+.seeAllBtn {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  padding: .8rem 4.2rem;
+  font-family: 'Alata', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;  
+  letter-spacing: 3px;
+  border: 1px solid hsl(0, 0%, 0%);
+  border-radius: 1px;
+  color: hsl(0, 0%, 0%);
+  background: hsl(0, 0%, 100%);
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.seeAllBtn:hover {
+  background: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+}
+
+@media screen and (min-width: 768px) {
+  .projectArea {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .projectTitle {
+    width: 85%;
+    font-size: 4rem;
+  }
+
+  .seeAllBtn {
+    position: absolute;
+    top: 9rem;
+    right: 9rem;
+  }
+}

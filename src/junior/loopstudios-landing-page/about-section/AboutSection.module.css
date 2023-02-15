@@ -1,0 +1,23 @@
+.imgWrapper {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.imgWrapper img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .imgWrapper {
+    width: 70%;
+  }
+
+  .textWrapper {
+    position: absolute;
+    bottom: 6rem;
+    right: 9rem;
+    width: 50rem;
+    padding: 6rem 9rem;
+    background: hsl(0, 4%, 100%);
+  }
+}

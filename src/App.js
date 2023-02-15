@@ -16,6 +16,10 @@ const AdviceGeneratorApp = React.lazy(() =>
 	import('./junior/advice-generator-app/AdviceGeneratorApp')
 )
 
+const LoopstudiosLandingPage = React.lazy(() =>
+	import('./junior/loopstudios-landing-page/LoopstudiosLandingPage')
+)
+
 function App() {
   return (
 		<React.Suspense fallback='Loading...'>
@@ -37,6 +41,10 @@ function App() {
 					<Route
 						path='/advice-generator-app'
 						element={<AdviceGeneratorApp />}
+					/>
+					<Route
+						path='/loopstudios-landing-page'
+						element={<LoopstudiosLandingPage />}
 					/>
 				</Routes>
 			</Router>
