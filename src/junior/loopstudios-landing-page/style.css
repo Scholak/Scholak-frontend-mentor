@@ -11,8 +11,8 @@ html {
 }
 
 body {
-  /* font-family: 'Alata', sans-serif;
-  font-family: 'Josefin Sans', sans-serif; */
+  max-width: 144rem;
+  margin: 0 auto;
 }
 
 section {
@@ -39,11 +39,11 @@ section {
 
 @media screen and (min-width: 768px) {
   section {
-    padding: 12rem 9rem;
+    padding: 9rem 15rem;
     text-align: left;
   }
 
   .section-title {
-    font-size: 3.5rem;
+    font-size: 5rem;
   }
 }

@@ -4,7 +4,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   color: hsl(0, 0%, 100%);
   z-index: 1;
 }
@@ -14,12 +14,26 @@ nav:before {
   position: absolute;
   inset: 0;
   background: hsl(0, 0%, 0%);
-  transform: translateX(-100%);
+  transform: translateX(-100vw);
   transition: all .3s;
 }
 
 nav > * {
   z-index: 10;
+}
+
+nav:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 9rem;
+  transition: all .3s;
+}
+
+nav.background:after {
+  background: hsl(0, 0%, 0%);
 }
 
 nav.active:before {
@@ -47,7 +61,7 @@ nav.active .links {
 .burger {
   position: absolute;
   right: 2rem;
-  top: 5rem;
+  top: 3rem;
   width: 3.5rem;
   padding: 1rem;
   cursor: pointer;
@@ -89,18 +103,24 @@ nav.active .burger span:last-child {
     position: absolute;
     flex-direction: row;
     justify-content: space-between;
+    max-width: 144rem;
+    margin: 0 auto;
     padding: 6rem 9rem;
+  }
+
+  nav:before {
+    background: transparent;
   }
 
   .links {
     display: flex;
     height: min-content;
-    font-size: 2rem;
+    font-size: 1.8rem;
     transform: translateX(0);
   }
 
   .links li {
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     border-bottom: 1px solid transparent;
     transition: all .3s;
   }

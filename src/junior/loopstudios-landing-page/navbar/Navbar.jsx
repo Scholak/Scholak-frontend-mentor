@@ -6,12 +6,26 @@ const Navbar = () => {
   
   const [active, setActive] = useState()
 
+	const [background, setBackground] = useState()
+
   const handleToggleMenu = () => {
     setActive(!active)
   }
 
+	window.addEventListener('scroll', () => {
+		if(window.scrollY > 0) {
+			setBackground(true)
+		} else {
+			setBackground(false)
+		}
+	})
+
   return (
-		<nav className={active ? styles.active : ''}>
+		<nav
+			className={`${active ? styles.active : ''} ${
+				background ? styles.background : ''
+			}`}
+		>
 			<h2>
 				<img src={logo} alt='' />
 			</h2>

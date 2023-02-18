@@ -72,6 +72,7 @@ ul {
   footer {
     flex-direction: row;
     justify-content: space-between;
+    padding: 6rem 15rem;
   }
 
   .links {
